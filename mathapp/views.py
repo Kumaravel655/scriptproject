@@ -5,3 +5,7 @@ from django.shortcuts import render
 def mathadd(request):
     context = {}
     return render(request, 'mathapp/mathadd.html', context)
+
+def rectangle(request):
+    context = {}
+    return render(request, 'mathapp/rectangle.html', context)    
