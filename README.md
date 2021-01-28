@@ -148,6 +148,68 @@ addBtn.addEventListener('click',function(e){
     txtC.value = c;
 });
 ```
+### volumecylinder.html
+```
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>volume of cylinder</title>
+    <link rel="stylesheet" href="{% static 'css/maths.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formview">
+            <div class="banner">
+               VOLUME OF CYLINDER
+            </div>
+            <div class="content">
+                <form action="volumecylinder.html" method="GET">
+                    {% csrf_token %}
+                    <div class="forminput">
+                        <label for="value_radius">RADIUS=</label>
+                        <input type="text" name="value_radius" id="value_radius">
+                    </div>
+                    <div  class="forminput">
+                        <label for="value_height">HEIGHT=</label>
+                        <input type="text" name="value_height" id="value_height">
+                    </div>                    
+                    <div class="forminput">
+                        <button type="button" name="button_calculate" id="button_calculate">calculate</button>
+                    </div>
+                    <div  class="forminput">
+                        <label for="value_volume">VOLUME=</label>
+                        <input type="text" name="value_volume" id="value_volume" readonly>
+                    </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/mathscylindervolume.js"></script>
+</body>
+
+</html>
+
+```
+### mathscylindervolume.js
+```
+calcBtn = document.querySelector('#button_calculate');
+
+calcBtn.addEventListener('click',function(e){
+
+    txtA = document.querySelector('#value_radius');
+    txtB = document.querySelector('#value_height');
+    txtC = document.querySelector('#value_volume');
+
+    let c;
+
+    c = parseFloat(txtA.value) * parseFloat(txtB.value);
+
+    txtC.value = c;
+});
+```
 
 ## OUTPUT:
 
@@ -155,12 +217,19 @@ addBtn.addEventListener('click',function(e){
 
 ![output](./static/img/o2.png)
 
+![output](./static/img/o3.png)
+
 
 ## CODE VALIDATION REPORT:
 ![output](./static/img/v1.png)
 
 ![output](./static/img/v2.png)
 
+![output](./static/img/v3.png)
+
 ## RESULT:
 Thus a website is designed for the add two numbers and is hosted in the URL http://kumaravel.student.saveetha.in:8000/addnumber. HTML code is validated.
+
 Thus a website is designed for the cluculate area of rectangle and is hosted in the URL http://kumaravel.student.saveetha.in:8000/rectangle. HTML code is validated.
+
+Thus a website is designed for the cluculate area of rectangle and is hosted in the URL http://kumaravel.student.saveetha.in:8000/volumecylinder. HTML code is validated.

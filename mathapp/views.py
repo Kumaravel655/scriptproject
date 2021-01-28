@@ -7,4 +7,8 @@ def addnumber(request):
 
 def rectangle(request):
     context = {}
-    return render(request,'mathapp/rectangle.html',context) 
+    return render(request,'mathapp/rectangle.html',context)
+
+def volumecylinder(request):
+    context = {}
+    return render(request,'mathapp/volumecylinder.html',context)  
