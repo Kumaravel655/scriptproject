@@ -149,13 +149,14 @@ addBtn.addEventListener('click',function(e){
 ```
 
 ## OUTPUT:
+
 ![output](./static/img/add2.png)
 
 ![output](./static/img/recarea.png)
 
 
 ## CODE VALIDATION REPORT:
-![output](./static/img/addcode.png)
+![output](./static/img/ai.png)
 
 ![output](./static/img/rectanglecode.png)
 
